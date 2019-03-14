@@ -9,6 +9,9 @@ pipeline {
                     dir ('meta-example') {
                         git branch: 'master', url: 'https://github.com/abhinema/meta-example.git'
                     }
+                    dir ('meta-raspberrypi') {
+                        git branch: 'sumo', url: 'git://git.yoctoproject.org/meta-raspberrypi'
+                    }
                 }
             }
         }
