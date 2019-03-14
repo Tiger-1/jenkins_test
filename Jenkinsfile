@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                dir ('poky') {
-                sh '''bash -c "export MACHINE=raspberrypi3 && source oe-init-build-env && bitbake-layers add-layer ../meta-example && bitbake-layers add-layer ../meta-raspberrypi && bitbake minimal-example" '''
+                sh '''bash -c "export MACHINE=\"raspberrypi3\" && source oe-init-build-env && bitbake-layers add-layer ../meta-example && bitbake-layers add-layer ../meta-raspberrypi && bitbake minimal-example" '''
                 }
             }
         }            
